@@ -2,7 +2,7 @@
 
 ## 🚀 Project Overview
 **SkillForge** is a full-stack **Learning Management System (LMS)** designed to help students and instructors manage courses, track progress, and enhance online learning experiences.  
-It includes a **React + Vite frontend** and a **Node.js + Express backend** with MongoDB.
+It features a **React + Vite frontend** and a **Node.js + Express backend** with MongoDB.
 
 ---
 
@@ -13,15 +13,15 @@ It includes a **React + Vite frontend** and a **Node.js + Express backend** with
 - **TailwindCSS**  
 - **Redux Toolkit**  
 - **React Router DOM**  
-- **Firebase** (for authentication and backend integration)  
-- **Recharts, React Spinners, React Toastify**  
+- **Firebase** (Authentication & Database)  
+- **Recharts**, **React Spinners**, **React Toastify**  
 
 ### Backend
 - **Node.js** + **Express.js**  
 - **MongoDB** (Mongoose)  
-- **JWT** for authentication  
-- **File uploads:** Multer + Cloudinary  
-- **Email notifications:** Nodemailer  
+- **JWT** Authentication  
+- **File Uploads:** Multer + Cloudinary  
+- **Email Notifications:** Nodemailer  
 - **Payments:** Razorpay  
 - **Other utilities:** dotenv, bcryptjs, validator, cors  
 
@@ -29,54 +29,52 @@ It includes a **React + Vite frontend** and a **Node.js + Express backend** with
 
 ## 📁 Project Structure
 
+```text
+
 SkillForge/
-├─ frontend/ # React frontend
-│ ├─ src/ # Components, pages, Redux slices
-│ ├─ public/ # Public assets (images, favicon)
-│ ├─ package.json
-├─ backend/ # Node.js backend
-│ ├─ controllers/ # Route logic
-│ ├─ models/ # MongoDB schemas
-│ ├─ routes/ # Express routes
-│ ├─ middlewares/ # Authentication / error handling
-│ ├─ utils/ # Helper functions
-│ ├─ index.js
-│ ├─ package.json
+├─ frontend/        # React frontend
+│  ├─ src/          # Components, pages, Redux slices
+│  ├─ public/       # Public assets (images, favicon)
+│  ├─ package.json
+├─ backend/         # Node.js backend
+│  ├─ controllers/  # Route logic
+│  ├─ models/       # MongoDB schemas
+│  ├─ routes/       # Express routes
+│  ├─ middlewares/  # Authentication / error handling
+│  ├─ utils/        # Helper functions
+│  ├─ index.js
+│  ├─ package.json
 ├─ .gitignore
 ├─ README.md
+⚡ Features
+User authentication (Student / Instructor)
 
-yaml
-Copy code
+Role-based access control
 
----
+Course creation and management
 
-## ⚡ Features
-- User authentication (Student / Instructor)  
-- Role-based access  
-- Course creation and management  
-- Enrollment & progress tracking  
-- Payments with Razorpay  
-- File uploads to Cloudinary  
-- Email notifications  
-- Interactive charts and dashboards  
+Enrollment & progress tracking
 
----
+Payment integration with Razorpay
 
-## 💻 Installation & Setup
+File uploads to Cloudinary
 
-### 1. Clone the repository
-```bash
+Email notifications
+
+Interactive dashboards and charts
+
+💻 Installation & Setup
+1. Clone the repository
+
 git clone https://github.com/ganeshupadhyay-63/SkillForge.git
 cd SkillForge
 2. Backend Setup
-bash
-Copy code
+
 cd backend
 npm install
 Create a .env file in backend/:
 
-ini
-Copy code
+
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
@@ -87,23 +85,31 @@ RAZORPAY_KEY_ID=your_razorpay_key
 RAZORPAY_KEY_SECRET=your_razorpay_secret
 EMAIL_USER=your_email
 EMAIL_PASS=your_email_password
-Run backend:
+Run the backend:
 
-bash
-Copy code
+
 npm run dev
 3. Frontend Setup
-bash
-Copy code
+
 cd ../frontend
 npm install
 Create a .env file in frontend/:
 
-ini
-Copy code
+
 VITE_FIREBASE_API_KEY=your_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
 VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
 VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
+Run the frontend:
+
+
+npm run dev
+
+📌 Notes
+Make sure the backend server is running before starting the frontend.
+
+.env files should never be pushed to GitHub.
+
+node_modules/ and other large files are ignored via .gitignore.
