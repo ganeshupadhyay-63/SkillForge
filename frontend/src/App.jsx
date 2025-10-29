@@ -28,7 +28,7 @@ import ReviewPage from './component/ReviewPage';
 
 
 
-export const serverUrl = "http://localhost:8081";
+export const serverUrl = "https://skillforge-backend1.onrender.com";
 
 
 function App() {
