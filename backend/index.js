@@ -17,7 +17,7 @@ const port = process.env.PORT || 8081;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://skillforge-frontend-t85z.onrender.com",
   credentials: true
 }));
 
